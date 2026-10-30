@@ -326,7 +326,7 @@ strong { color: var(--color-heading); }
 .footer-links { list-style: none; padding: 0; margin: 0; }
 .footer-links li { margin: 0 0 0.45rem; }
 .footer-title { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-muted); margin: 0 0 0.75rem; font-family: var(--font-body); font-weight: 700; }
-.footer-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.12); font-size: 0.75rem; color: var(--color-muted); }
+.footer-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.12); font-size: 0.85rem; color: var(--color-muted); }
 .footer-bottom p { margin: 0; }
 
 /* ==========================================================================
