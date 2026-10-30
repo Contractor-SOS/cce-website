@@ -1,0 +1,5 @@
+# Old URLs that must keep working. One rule per line: from  to  status
+# GoDaddy member-account pages from the old site
+/m/*                        /                              301
+# The SMS terms page links to this address; the page itself keeps its old address
+/sms-terms-and-conditions   /sms-terms-and-conditions-1    301
