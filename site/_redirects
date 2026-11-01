@@ -1,5 +1,9 @@
 # Old URLs that must keep working. One rule per line: from  to  status
 # GoDaddy member-account pages from the old site
 /m/*                        /                              301
-# The SMS terms page links to this address; the page itself keeps its old address
-/sms-terms-and-conditions   /sms-terms-and-conditions-1    301
+# The policy pages moved to short addresses (Nov 1, 2026); the old addresses keep working
+/privacy-policy              /privacy       301
+/sms-terms-and-conditions-1  /sms-terms     301
+/sms-terms-and-conditions    /sms-terms     301
+# Review requests: Crown City's existing review page, left exactly as it is (302, so the target can change later)
+/reviews                     https://crowncityexteriors.github.io/ReviewDirector/start/   302
