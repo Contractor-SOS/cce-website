@@ -17,12 +17,13 @@ The repository itself is public, and so are its commit history and workflow logs
 ## How to edit
 
 - Plain HTML, CSS and a little vanilla JavaScript. No frameworks, build tools, npm packages or new third-party scripts unless the request explicitly asks for one.
-- Mobile-first and fast. Check that every layout works at 360px wide. Keep images under 300 KB, and give every image `width`, `height` and meaningful `alt` text (empty `alt=""` only for decoration).
+- Mobile-first and fast. Check that every layout works at 360px wide. Keep images under 300 KB (except that one full-width background photo, below), and give every image `width`, `height` and meaningful `alt` text (empty `alt=""` only for decoration).
 - Every page has one H1, a unique `<title>` under 60 characters, a meta description under 160 characters, and a canonical link to its live URL.
 - The header and footer are repeated in every page. When you change one, change it the same way on every page.
 - Keep every existing URL working. If a page is removed or renamed, add a 301 line to `site/_redirects` and update `site/sitemap.xml`.
 - Embeds (forms, scheduling, maps) are iframes or script tags supplied by those services. Copy their codes exactly and don't rebuild them.
-- New photos go in `site/assets/img/`. Resize large photos to at most 1600px wide before using them.
+- New photos go in `site/assets/img/`. Resize large photos to at most 1600px wide before using them. The one exception is a single full-width background photo per page (the `-large` copy), which may be up to 2400px and 600 KB.
+- Photos sent with a request arrive in `site/assets/uploads/` already web-size (upright, metadata removed, a `-large` copy for backgrounds), so don't resize them again.
 - Keep the meaning of the company's text. Fix typos only when asked, and never invent facts such as prices, licenses, awards or reviews.
 - Accessibility: real links and buttons, visible focus outlines, text contrast of at least 4.5:1, and form fields with labels.
 
