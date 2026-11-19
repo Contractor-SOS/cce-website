@@ -50,7 +50,7 @@ jobs:
     permissions:
       contents: write
       id-token: write
-    uses: Contractor-SOS/site-tools/.github/workflows/claude-edit.yml@main
+    uses: Contractor-SOS/site-tools/.github/workflows/claude-edit.yml@sd5-sd7
     with:
       request_id: ${{ inputs.request_id }}
       request: ${{ inputs.request }}
