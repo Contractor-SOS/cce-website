@@ -187,6 +187,8 @@ strong { color: var(--color-heading); }
 .site-nav .nav-cta { margin-top: 1rem; }
 .site-nav .nav-cta a { border: 0; display: flex; align-items: center; justify-content: center; line-height: 1.2; }
 .header-inner { flex-wrap: wrap; }
+/* Keep the logo/menu-button row the same height whether the menu is open or closed, so nothing shifts */
+.brand { min-height: 4.25rem; }
 /* The call-to-action button in the menu keeps button colors, not menu-link colors */
 .site-nav .nav-cta a, .site-nav .nav-cta a[aria-current="page"] { color: var(--color-button-text); }
 .site-nav .nav-cta a:hover { color: var(--color-button-hover-text); }
