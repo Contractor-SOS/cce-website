@@ -364,6 +364,17 @@ strong { color: var(--color-heading); }
   background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)), url("/assets/uploads/REQ-11/img_1769-large.jpg");
   background-size: cover; background-position: center;
 }
+/* On screens wider than tall, show the porch and doors rather than the middle of the tall photo */
+@media (orientation: landscape) {
+  .home::before { background-position: center 62%; }
+}
+/* Menu bar: see-through while the page is at its top (class added by site.js), solid otherwise */
+.home .site-header.is-top { background: transparent; border-bottom-color: transparent; }
+/* The big crown is shown solid, not half faded */
+.home .hero-mark { opacity: 1; }
+@media (min-width: 48rem) {
+  .home .hero-mark { width: min(26vw, 18rem); }
+}
 .home .hero-crown { background: transparent; border-bottom: 0; }
 .home .section { background: var(--color-bg); }
 .home .section-alt { background: var(--color-surface); }
