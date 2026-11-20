@@ -368,6 +368,12 @@ strong { color: var(--color-heading); }
 .home .section { background: var(--color-bg); }
 .home .section-alt { background: var(--color-surface); }
 .home .hero-crown h1 { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6); }
+/* Home page footer: see-through so the photo shows behind it, with light text kept readable */
+.home .site-footer { background: transparent; color: #f2f2f2; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75); }
+.home .site-footer a, .home .footer-brand { color: #f2f2f2; }
+.home .site-footer a:hover { color: var(--color-accent); }
+.home .footer-title, .home .footer-bottom { color: #d9d9d9; }
+.home .footer-bottom { border-top-color: rgba(255, 255, 255, 0.25); }
 /* When a phone bounces at the top of the page, show the header's colour above it, not the photo */
 .home .site-header::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 100vh; background: var(--color-header-bg); pointer-events: none; }
 /* The same for Safari on a phone: a band of the header's colour, fixed at the top of the screen behind the header */
