@@ -22,7 +22,7 @@ The repository itself is public, and so are its commit history and workflow logs
 - The header and footer are repeated in every page. When you change one, change it the same way on every page.
 - Keep every existing URL working. If a page is removed or renamed, add a 301 line to `site/_redirects` and update `site/sitemap.xml`.
 - Embeds (forms, scheduling, maps) are iframes or script tags supplied by those services. Copy their codes exactly and don't rebuild them.
-- Pictures sent with a request stay where the workflow puts them, in `site/assets/uploads/<request id>/`; use them there, by their path. `site/assets/img/` is for pictures that are already part of the site. Resize large photos to at most 1600px wide before using them. The one exception is a single full-width background photo per page (the `-large` copy), which may be up to 2400px and 600 KB.
+- Pictures sent with a request stay where the workflow puts them, in `site/assets/uploads/<request id>/`; use them there, by their path. `site/assets/img/` is for pictures that are already part of the site. Resize large photos to at most 1600px wide before using them. The one exception is one full-width background photo a page, in at most two cuts (a wide cut for screens wider than tall and a tall cut for phones), each up to 2400px and 600 KB.
 - Photos sent with a request arrive in `site/assets/uploads/` already web-size (upright, metadata removed, a `-large` copy for backgrounds), so don't resize them again.
 - Keep the meaning of the company's text. Fix typos only when asked, and never invent facts such as prices, licenses, awards or reviews.
 - Accessibility: real links and buttons, visible focus outlines, text contrast of at least 4.5:1, and form fields with labels.
