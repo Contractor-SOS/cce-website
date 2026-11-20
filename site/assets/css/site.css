@@ -357,6 +357,17 @@ strong { color: var(--color-heading); }
 @media (max-width: 47.99rem) {
   .hero-mark { position: static; transform: none; width: 8.5rem; opacity: 1; margin-bottom: 1.5rem; }
 }
+/* Home page: photo stays put while the page scrolls over it */
+.home::before {
+  content: ""; position: fixed; inset: 0; z-index: -1;
+  background-color: #1b1f1a;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)), url("/assets/uploads/REQ-11/img_1769-large.jpg");
+  background-size: cover; background-position: center;
+}
+.home .hero-crown { background: transparent; border-bottom: 0; }
+.home .section { background: var(--color-bg); }
+.home .section-alt { background: var(--color-surface); }
+.home .hero-crown h1 { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6); }
 .band-dark { background: linear-gradient(90deg, #0e0e0e, #1b1b1b); border-block: 1px solid var(--color-border); }
 .band-dark h2 { color: var(--color-heading); }
 .founders h3 { font-family: var(--font-wordmark); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent); }
