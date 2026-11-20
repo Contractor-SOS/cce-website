@@ -370,6 +370,8 @@ strong { color: var(--color-heading); }
 .home .hero-crown h1 { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6); }
 /* When a phone bounces at the top of the page, show the header's colour above it, not the photo */
 .home .site-header::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 100vh; background: var(--color-header-bg); pointer-events: none; }
+/* The same for Safari on a phone: a band of the header's colour, fixed at the top of the screen behind the header */
+.home::after { content: ""; position: fixed; top: 0; left: 0; right: 0; height: 4.25rem; z-index: -1; background: var(--color-header-bg); pointer-events: none; }
 .band-dark { background: linear-gradient(90deg, #0e0e0e, #1b1b1b); border-block: 1px solid var(--color-border); }
 .band-dark h2 { color: var(--color-heading); }
 .founders h3 { font-family: var(--font-wordmark); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent); }
