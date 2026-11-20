@@ -185,7 +185,7 @@ strong { color: var(--color-heading); }
 }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--color-accent); }
 .site-nav .nav-cta { margin-top: 1rem; }
-.site-nav .nav-cta a { border: 0; }
+.site-nav .nav-cta a { border: 0; display: flex; align-items: center; justify-content: center; line-height: 1.2; }
 .header-inner { flex-wrap: wrap; }
 /* The call-to-action button in the menu keeps button colors, not menu-link colors */
 .site-nav .nav-cta a, .site-nav .nav-cta a[aria-current="page"] { color: var(--color-button-text); }

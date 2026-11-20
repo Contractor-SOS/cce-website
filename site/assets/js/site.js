@@ -12,9 +12,19 @@
     var menuOpen = toggle.getAttribute('aria-expanded') === 'true';
     header.classList.toggle('is-top', window.scrollY <= 0 && !menuOpen);
   }
-  window.addEventListener('scroll', updateTop, { passive: true });
+  // On phones, an open menu folds away once the visitor scrolls a little
+  var openedAt = 0;
+  function collapseOnScroll() {
+    if (toggle.getAttribute('aria-expanded') !== 'true') return;
+    if (Math.abs(window.scrollY - openedAt) > 30) setOpen(false);
+  }
+  window.addEventListener('scroll', function () {
+    updateTop();
+    collapseOnScroll();
+  }, { passive: true });
 
   function setOpen(open) {
+    if (open) openedAt = window.scrollY;
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     nav.classList.toggle('is-open', open);
     updateTop();
