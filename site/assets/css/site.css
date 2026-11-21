@@ -372,7 +372,10 @@ strong { color: var(--color-heading); }
   width: min(40vw, 28rem); opacity: 0.18; pointer-events: none;
 }
 @media (max-width: 47.99rem) {
-  .hero-mark { position: static; transform: none; width: 8.5rem; opacity: 1; margin-bottom: 1.5rem; }
+  .hero-mark { position: static; transform: none; width: 8.5rem; opacity: 1; margin: 0 auto 1.5rem; display: block; }
+  .hero-crown .hero-actions { flex-direction: column; align-items: center; }
+  /* Space between the Facebook/Instagram buttons and the map */
+  #contact .embed-map { margin-top: 1.5rem; }
 }
 /* Home page: photo stays put while the page scrolls over it */
 .home::before {
