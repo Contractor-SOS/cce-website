@@ -192,6 +192,17 @@ strong { color: var(--color-heading); }
 /* The call-to-action button in the menu keeps button colors, not menu-link colors */
 .site-nav .nav-cta a, .site-nav .nav-cta a[aria-current="page"] { color: var(--color-button-text); }
 .site-nav .nav-cta a:hover { color: var(--color-button-hover-text); }
+/* On phones and tablets the open menu floats over the page instead of pushing it down,
+   so opening or closing it never moves the content below */
+@media (max-width: 71.99rem) {
+  .site-nav {
+    position: absolute; top: 100%; left: 0; right: 0; width: auto;
+    padding: 0 var(--gutter);
+    background: var(--color-header-bg);
+    border-bottom: 1px solid var(--color-border);
+    max-height: calc(100vh - 5.5rem); overflow-y: auto;
+  }
+}
 /* Desktop menu from 72rem (1152px); narrower screens use the Menu button */
 @media (min-width: 72rem) {
   .header-inner { flex-wrap: nowrap; }
@@ -207,6 +218,10 @@ strong { color: var(--color-heading); }
 @media (min-width: 72rem) { .js .site-nav { display: block; } }
 .no-js .nav-toggle { display: none; }
 .no-js .site-nav { display: block; }
+@media (max-width: 71.99rem) {
+  /* Without JavaScript the menu is always shown, so keep it in the page flow rather than floating over content */
+  .no-js .site-nav { position: static; padding: 0; max-height: none; overflow: visible; border-bottom: 0; }
+}
 
 /* ==========================================================================
    Hero and bands
